@@ -5,26 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Flat.create!(
-  name: 'Light & Spacious Garden Flat London',
-  address: '10 Clifton Gardens London W9 1DT',
-  description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
-  price_per_night: 75,
-  number_of_guests: 3
-)
+require 'faker'
 
-Flat.create!(
-  name: 'Sunny and beautiful',
-  address: '134 Bukingham London W9 1DT',
-  description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
-  price_per_night: 56,
-  number_of_guests: 2
-)
-
-Flat.create!(
-  name: 'Light and good place',
-  address: '237 Bugger streed London W9 1DT',
-  description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
-  price_per_night: 13,
-  number_of_guests: 8
-)
+Flat.destroy_all
+4.times do
+  pic = "https://source.unsplash.com/300x300/?flats"
+  flat = Flat.create!(name: Faker::Address.city,
+                      address: Faker::Address.street_address,
+                      picture_url: pic,
+                      description: 'brand new flat for renting',
+                      price_per_night: rand(150..500),
+                      number_of_guests: rand(1..5))
+  flat.save
+end
