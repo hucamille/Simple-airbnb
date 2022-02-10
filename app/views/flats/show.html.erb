@@ -1,12 +1,12 @@
-<div class="card_flat">
-  <li><%= @flat.name %></li>
-
-  <li><%= @flat.address %></li>
+<div class="card-flat">
+  <h1><%= @flat.name  %></h1>
+    <p class="card-flat"><%= @flat.address %></p>
 </div>
-  <div class="card_flat">
-    <li><%= @flat.description %></li>
-    <li><%= @flat.price_per_night %></li>
+  <div class="card-flat">
+    <p><%= @flat.description %></p>
   </div>
-    <div class="card_flat">
-    <li><%= @flat.number_of_guests %></li>
+    <div class="card-flat">
+    <h3>Details</h3>
+    <p><%= @flat.number_of_guests %></p> <p>$<%= @flat.price_per_night %></p>
+
   </div>
