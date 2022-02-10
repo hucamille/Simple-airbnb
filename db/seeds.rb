@@ -8,8 +8,7 @@
 require 'faker'
 
 Flat.destroy_all
-4.times do
-  pic = "https://source.unsplash.com/300x300/?flats"
+3.times do
   flat = Flat.create!(name: Faker::Address.city,
                       address: Faker::Address.street_address,
                       description: 'brand new flat for renting',

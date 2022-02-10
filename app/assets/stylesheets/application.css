@@ -13,4 +13,21 @@
  *= require_tree .
  *= require_self
  */
-@import 'flats'
+ @import 'flats';
+
+ body {
+  margin: 0;
+ }
+
+ ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+  list-style: none;
+}
+
+ul > li {
+  border: 1px solid lightgrey;
+  box-shadow: 0 1px 3px grey;
+}

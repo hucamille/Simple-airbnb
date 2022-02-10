@@ -1,35 +1,16 @@
-<div class="container mt-3">
-  <div class="row">
-    <div class="col-12">
-      <h1>All Flats</h1>
-    </div>
-  </div>
-
-  <div class="row">
-    <% @flats.each do |flat| %>
-      <div class="col-4">
-        <div class="flat-card">
-          <div class="flat-card-content">
-            <div class="flat-card-title">
-              <h4><%= flat.name %></h4>
-            </div>
-            <p><%= flat.address %></p>
-            <div class="flex">
-              <div class="flex">
-                <i class="material-icons mr-2">Number of guests: </i><span><%= flat.number_of_guests %></span>
-              </div>
-              <div class="flex ml-3">
-                <i class="material-icons mr-2">$</i> <%= flat.price_per_night %>
-              </div>
-            </div>
-          </div>
-          <div class="flat-card-actions">
-            <%= link_to 'More info', flat_path(flat) %>
-            <a href="#" class="ml-3 text-warning">Edit</a>
-            <a href="#" class="ml-3 text-danger">Remove</a>
-          </div>
-        </div>
-      </div>
-    <% end %>
+<div class="container">
+  <div class="col-12">
+    <h1>Simple airbnb</h1>
   </div>
 </div>
+  <ul>
+    <% @flats.each do |flat| %>
+      <li>
+        <div class="card">
+          <h3><%= flat.name %></h3>
+          <p><%= flat.description %></p>
+          <p><%= flat.number_of_guests %> $<%= flat.price_per_night  %></p>
+        </div>
+      </li>
+      <% end %>
+  </ul>
