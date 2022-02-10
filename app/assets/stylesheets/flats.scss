@@ -1,15 +1,63 @@
 // Place all the styles related to the flats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+h1 {
+  display: flex;
+  padding: 16px;
+}
+
+.header {
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(238, 238, 238);
+  border-bottom: 1px solid lightgrey;
+}
+
+.header > a {
+  padding: 12px;
+  border-radius: 12px;
+  border:solid lightblue;
+  color: lightskyblue;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 4px 0;
+}
+
+.container {
+  margin: 4px 32px;
+}
+
+.form {
+  display: flex;
+  align-items:center;
+  flex-direction:column;
+  border: 1px solid lightgrey;
+}
+
+form > input {
+  width: 100%;
+  margin: 4px;
+}
+
 .card {
   display: flex;
-  align-items: left;
-  flex-direction: column;
+  align-items:left;
+  flex-direction:column;
+  background-color: rgb(238, 238, 238);
   flex-grow: 1;
   padding: 8px;
 }
 
- ul {
+.card_flat {
+  display: flex;
+  list-style: none;
+  padding-top: 28px;
+  border: 1px solid lightgrey;
+  box-shadow: 0 1px 3px grey;
+}
+ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
@@ -20,4 +68,9 @@
 ul > li {
   border: 1px solid lightgrey;
   box-shadow: 0 1px 3px grey;
+}
+
+li  a {
+  padding: 8px;
+  line-height: 40px;
 }

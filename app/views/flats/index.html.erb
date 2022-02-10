@@ -11,6 +11,7 @@
           <p><%= flat.description %></p>
           <p><%= flat.number_of_guests %> $<%= flat.price_per_night  %></p>
         </div>
+        <%= link_to "More info", flat_path(flat)%>
       </li>
       <% end %>
   </ul>
